@@ -1,6 +1,5 @@
 package com.example.resume.controller;
 
-import com.example.resume.common.exception.GenericBadRequestException;
 import com.example.resume.dto.Response;
 import com.example.resume.entity.ResumeEntity;
 import com.example.resume.service.ResumeService;

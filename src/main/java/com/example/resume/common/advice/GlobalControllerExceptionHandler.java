@@ -19,7 +19,7 @@ public class GlobalControllerExceptionHandler {
      */
     @ExceptionHandler(GenericBadRequestException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public Response<Void> handleInvalidException(RuntimeException runtimeException) {
+    public Response<Void> handleInvalidException(GenericBadRequestException runtimeException) {
         log.error(runtimeException.getMessage(), runtimeException);
 
         return createResponseDto(runtimeException.getMessage());
