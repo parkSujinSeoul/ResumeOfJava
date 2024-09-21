@@ -14,7 +14,7 @@ public class ResumeController {
     private final ResumeService resumeService;
 
     @PostMapping("/save/introduce")
-    public Response<ResumeEntity> registIntroduce(String introduce){
+    public Response<ResumeEntity> registIntroduce(@RequestBody String introduce){
         ResumeEntity resume = resumeService.saveResume(introduce);
         return new Response<ResumeEntity>("",resume);
     }
